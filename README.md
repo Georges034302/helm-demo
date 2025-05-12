@@ -61,7 +61,7 @@ Before using this project:
 🌐 Waiting for external IP on service 'nginx-app-helm'...
 ```
 NAME                TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
-nginx-app-helm     LoadBalancer   10.0.25.145    20.120.40.10    80:32000/TCP   2m
+nginx-app-nginx     LoadBalancer   10.0.25.145    20.120.40.10    80:32000/TCP   2m
 ```
 
 
@@ -69,7 +69,7 @@ nginx-app-helm     LoadBalancer   10.0.25.145    20.120.40.10    80:32000/TCP   
 
 **✅Extract the EXTERNAL_IP to the bash-terminal**
 ```
-EXTERNAL_IP=$(kubectl get svc nginx-app-helm -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+EXTERNAL_IP=$(kubectl get svc nginx-app-nginx -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 echo "$EXTERNAL_IP"
 ```
 ---
